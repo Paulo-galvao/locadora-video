@@ -6,11 +6,11 @@ const Schema = conn.Schema;
 const userSchema = new Schema({
     name: {
         type: String,
-        required: true
+        // required: true
     },
     birthday_date: {
         type: Date,
-        required: true
+        // required: true
     },
     email: {
         type: String,
@@ -34,7 +34,7 @@ const userSchema = new Schema({
     },
     phones: {
         type: Array,
-        required: true,
+        // required: true,
         minLength: 8
     },
     adress: {
@@ -42,7 +42,7 @@ const userSchema = new Schema({
     },
     house_number: {
         type: Number,
-        required: true
+        // required: true
     }
 }); 
 

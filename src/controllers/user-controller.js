@@ -3,7 +3,6 @@ import jwt from "../services/jwt-service.js";
 
 async function store(req, res) {
     try {
-        console.log(req.body)
         const content = await User.create(req.body);
         res.status(201).json(content);
     } catch (error) {
