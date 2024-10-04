@@ -19,6 +19,17 @@ const movieSchema = new Schema({
         type: String,
         enum: ["LIVRE", "MAIOR16", "MAIOR18"],
         required: true
+    },
+    gender: {
+        type: String,
+        required: true,
+        enum: [
+            "Ação",
+            "Documentário",
+            "Comédia",
+            "Drama",
+            "Infantil"
+        ]
     }
 });
 

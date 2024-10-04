@@ -43,7 +43,11 @@ const userSchema = new Schema({
     house_number: {
         type: Number,
         // required: true
-    }
+    },
+    already_rented: [{
+        type: Schema.Types.ObjectId,
+        ref: "Movie"
+    }]
 }); 
 
 userSchema.pre("save", async function () {    
