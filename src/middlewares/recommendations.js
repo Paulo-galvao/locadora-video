@@ -6,7 +6,6 @@ async function recommend(req, res, next) {
     try {
         const user = await User.findById(req.params.id).exec();
         const alreadyRented = user.already_rented.map(rent => rent.toString()); // lista dos ids dos filmes já alugados
-        // console.log(alreadyRented);
 
         let acao = 0;
         let doc = 0;
@@ -63,7 +62,6 @@ async function recommend(req, res, next) {
             }
             
             console.log(max); // genero mais assistido pelo usuário
-            // res.status(200).json(max); 
 
             // recomendar filmes por genero
 
@@ -76,7 +74,6 @@ async function recommend(req, res, next) {
                 } 
             })
 
-            // console.log(filmesRecomendados);
             res.status(200).json(filmesRecomendados)
 
             next();
@@ -87,4 +84,4 @@ async function recommend(req, res, next) {
     
 }
 
-export default recommend;
+export default recommend; 
